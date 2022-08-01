@@ -12,7 +12,7 @@ function App() {
       <Router>
          <Navbar />
          <Routes>
-           <Route path='/' exact />
+           <Route path='/' element={<Home/>}/>
          </Routes>
       </Router>
 
