@@ -1,29 +1,28 @@
 import React from 'react'
 import './IntroComponent.css';
+import { useEffect, useState } from 'react';
+import useContentful from '../useContentful';
+import Cards from './Cards'
+import NewArrivalCards from '../NewArrivalCards';
 
 function IntroComponent() {
+  const [arrival, setArrival] = useState([]);
+  const { getMen } = useContentful();
+
+  useEffect(() => {
+    getMen().then(response => setArrival(response))
+  });
   return (
+
+
     <div className='intro-container'>
-      {/* <video src='/videos/video-2.mp4' autoPlay loop muted /> */}
       <h1>Fancyon</h1>
-      <p>Want the latest styles?...We got them!!</p>
-      <div className='intro-btns'>
-        {/* <Button
-          className='btns'
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-        >
-          GET STARTED
-        </Button>
-        <Button
-          className='btns'
-          buttonStyle='btn--primary'
-          buttonSize='btn--large'
-          onClick={console.log('hey')}
-        >
-          WATCH TRAILER <i className='far fa-play-circle' />
-        </Button> */}
-      </div>
+      <p>Want the latest styles?...We got them!</p>
+      <Cards/>
+      {/* {
+        arrival.map((arrival, index) => (
+          <NewArrivalCards key={index} arrival={arrival} />))
+      } */}
     </div>
   )
 }

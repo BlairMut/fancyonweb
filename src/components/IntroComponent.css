@@ -12,20 +12,13 @@
   } */
 
   
-video {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: -1;
-}
-
 .intro-container {
   /* background: url('./images/img-home.jpg') center center/cover no-repeat; */
   background-color: #FF5A82;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
+  padding-top: 200px;
   flex-direction: column;
   justify-content: center;
   position: relative;
@@ -38,14 +31,16 @@ video {
   color: #fff;
   font-size: 100px;
   margin-top: -100px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 
 .intro-container > p{
-  margin-top: 8px;
+  top: 0px;
+  margin-top: 0px;
   color: #fff;
   font-size: 32px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 
