@@ -62,7 +62,7 @@
   
   .nav-links:hover {
     border-bottom: 4px solid #FF5A82;
-    color: #242424;
+    /* color: #242424; */
     transition: all 0.2s ease-out;
   }
   
